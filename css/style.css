@@ -1,0 +1,248 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16 px;
+    color:var(--lightColor);
+}
+
+
+
+:root{
+    --primaryColor:#ff274b;
+    --SecondaryColor:#f7bcf7;
+    --lightColor:#ffffff;
+    --bgColor-1:#171a1c;
+    --bgColor-2:#22282a;
+    --padding: 8%;
+}
+.home{
+    width:100%;
+    height:100vh;
+    background-color: var(--bgColor-1);
+    /* bech yodh'hrou les élements fou9 b3adh'hom 3malna div content */
+    display: flex;
+    flex-direction: column;
+}
+span{
+    color:var(--primaryColor);
+}
+/*lparagraphe 3onser commun min lmosta7sen nektebha fi bidayet lmilaf*/
+p{
+    color:var(--SecondaryColor);
+    letter-spacing: 1px;
+    line-height: 1.8rem;
+    font-size: 1rem;
+
+}
+h1{
+    font-size: 2.2rem;
+    /* les espaces entre les lettres */
+    letter-spacing: 0.12rem;
+    /*chakl ra2s alfa2ra 3indama nomaririha 3ala l3onwen h2 twali yed*/
+    cursor:pointer;
+}
+nav{
+   
+    /* 9imet alhawamech adakhiliya*/
+    padding-top:2.8rem ;
+    padding-left:var(--padding);
+    padding-right: var(--padding);
+    /* bech ywali nav bjnab h1*/
+    display: flex;
+    /*espace bin nav wil h1 espace kbir */
+    justify-content: space-between;
+    align-items: center;
+
+}
+nav ul li{
+    /* na7iw romouz*/
+    list-style-type: none;
+    /* ndhahrou 3anaser liste fi star wahed*/
+    display:inline-block;
+    /*l'espace bin 3anaser liste*/
+    margin:0.8rem 1.5rem;
+}
+nav ul li a{
+    color:var(--lightColor);
+    /*bech na7i star li ta7t lien*/
+   text-decoration: none;
+   /*les lettres lkoul min koul mot kbira*/
+   text-transform: capitalize;
+   /* wa9t t7eb ta3ml annimation ll a*/
+   transition: 0.4s;
+
+}
+/*ki n7ot souris fou9 l a yetbadel lcouleur*/
+nav ul li a:hover{
+color:var(--primaryColor);
+}
+/* ki neclici 3al bouton yet7arkou les élements lokhrin eli m3ah fard star khtr ki t7ot souris fou9 lbouton tzid bordure lvaleur mte3ha 2pixel
+ ybadel min 7ajm lbouton yet7arkou m3ah bech tetfadeh tzid bordure bnafs l7ajm mais transparent ya3ni mayetrach
+ 9bal mat7ot souris fou9ha*/
+.btn{
+    background-color: var(--primaryColor);
+    color:var(--lightColor);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.81rem 1.87rem;
+    /* type de bordure*/
+    border-radius: 30px;
+    transition:0.4s;
+    border:2px solid transparent;
+}
+.btn:hover{
+    background-color: transparent;
+    border:2px solid var(--primaryColor);
+
+}
+/*n7ebou lcontent yekhou lmisa7a lib9at min section flex grow yekber bech yach8el lmisa7a lib9at */
+.content{
+    
+    flex-grow:1 ;
+    padding:0;
+    display:flex;
+    /*yodh'hrou awled hal element fil wost content*/
+    align-items: center;
+    justify-content: space-between;
+}
+.container-texts{
+    position:relative;
+    /* tarfa3ha lfou9 b70 px*/
+    bottom: 80 px;
+
+}
+
+/* idha t7eb tdhaher h1 h3 h4 fi west lpage nesta3mlou principe lflex box tzid display flex fi content
+notlbou bech yodh'hrou awled hal element fil wost content*/
+h1{
+    font-size: 4.65rem;
+    margin:1.7rem 0;
+
+}
+h3{
+    font-size:1.5rem;
+    margin-bottom: 3.5rem;
+}
+h4{
+    font-size:1.5rem;  
+    letter-spacing: 0.12 rem;
+    color:var(--SecondaryColor);
+
+}
+h5{
+    font-size: 1.37rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+}
+.social{
+    margin-top: 3.5rem;
+}
+.social img{
+    margin-right: 2rem;
+    width:2.5rem;
+    transition:0.4s;
+}
+.social img:hover{
+    /*scale tbadel 7ajem l3onser ya3ni ki t7ot souris ywali akber*/
+    transform:scale(1.2)
+}
+/*7asb toul w3ardh l'ab*/
+.home .container-images{
+    width: 45%;
+    height: 90%;
+    position:relative;
+    align-self: flex-end;
+}
+.home .container-images img{
+    position:absolute;/*tnjm t7ot wahda fou9 lokhra*/
+    bottom:0; /* yet7atou fi ekher lpage*/
+    height: 100%;
+    right: 40px;
+    border-radius: 20%;
+    opacity: var(--lightColor);
+    /* ki tetbadel ll bottom ou left annimation b 1s*/  
+    transition: right 1s,right 1s;
+}
+/*bech tetaba9 annimaton 3la tsawer lkoul li mawjoudin west l'élement container hover ya3ni ki t7ot souris fou9hom,
+ benesba ll 3onser eli ya7mel class shape narfa3 9imet lbutton */
+.home .container-images:hover .shape{
+    bottom:40px;
+    
+}
+/* 7arekneha ll ysar*/
+.home .container-images:hover .pic{
+    right:45%;
+}
+.about{
+background-color: var(--bgColor-2);
+padding:2rem var(--padding);
+/* bech t7ot les élements bjnab b3adh'hom*/
+display: flex;
+align-items: center;
+/*kifech yodh'hrou les élements horizontale et verticale*/
+justify-content: space-around;
+}
+.about.container-images{
+ width:90%;
+};
+.about.container-texts{
+    /*35 min 3ardh checha benesba ll nosous*/
+    width: 35%;
+}
+.services{
+    background-color: var(--bgColor-1);
+    padding:2rem var(--padding);
+    
+    
+}
+/*n7eb our services fi west lpage*/
+.text-center{
+text-align:center;
+}
+.box{
+    display:flex;
+    /* bech t7aded kifech yodh'hrou les élements enfants*/
+   justify-content: space-between;
+
+
+}
+.card{
+    width:300px;
+    background-color: var(--bgColor-1);
+    border-radius: 20px;
+    padding:1.3rem 2rem;
+    text-align: center;
+    justify-content: space-between;
+
+
+}
+.skills{
+    background-color: var(--bgColor-2);
+    padding:2rem var(--padding);
+    /* bech t7ot les élements bjnab b3adh'hom*/
+    display: flex;
+    align-items: center;
+    /*kifech yodh'hrou les élements horizontale et verticale*/
+    justify-content: space-between;
+    }
+
+.skills.container-images{
+    width:35%;
+   };
+   .skills.container-images img{
+       /*35 min 3ardh checha benesba ll nosous*/
+       width: 90%;
+   }
+   .skills.container-skills{
+    width:40%;
+
+   }
+   .content-skills{
+    display: flex;
+    flex-wrap:wrap;
+
+   }
